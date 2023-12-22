@@ -1,0 +1,356 @@
+body {
+    background-color: #1a1c22;
+    background: var(--bs-gray) url('../img/nino192-bg.webp') no-repeat;
+    background-size: 100vw auto;
+    box-shadow: 0 50px 50px 0 #00000050 inset;
+
+}
+.header-top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.menu {
+    display: none;
+}
+.header {
+    width: auto;
+    height: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.homepage {
+    width: auto;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.homepage a {
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--bs-light);
+    letter-spacing: 2px;
+    line-height: 60px;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+}
+.nav {
+    margin: auto;
+    gap: 20px;
+}
+.nav a, .login a {
+    font-size: 22px;
+    color: var(--bs-gray-300);
+}
+.nav a:hover, .login a:hover {
+    color: var(--bs-light);
+}
+.login {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.login-icon {
+    font-size: 28px;
+    margin-top: 6px;
+    color: var(--bs-gray-300);
+}
+.login-icon:hover {
+    color: var(--bs-light);
+}
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+.banner-infor {
+    width: 430px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 38%;
+    left: 64px;
+}
+.banner-rank {
+    width: 100%;
+    height: 36px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #12443d;
+}
+.banner-name {
+    width: 100%;
+    height: 95px;
+    font-size: 64px;
+    font-weight: 700;
+    color: rgb(16, 27, 65);
+}
+.banner-description {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+}
+.banner-icons {
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+.banner-icon{
+    /* width: auto; */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.watch-now-trailer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.watch-now {
+    width: auto;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    background-color: #CAE962;
+    padding: 4px 10px;
+    color: #fff;
+    border-radius: 15px;
+}
+.watch-now a {
+    font-size: 22px;
+    margin-left: 4px;
+    font-weight: 900; 
+    color: #F8F7F9;
+}
+.watch-now ion-icon {
+    font-size: 30px;
+    margin-bottom: -4px;
+}
+.trailer-banner {
+    height: 44px;
+    margin-left: 10px;
+    font-size: 24px;
+    background: none;
+    border: solid 2px #CAE962;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+.trailer-banner a {
+    color: #fff;
+}
+.banner-next-pre {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    gap: 10px;
+}
+.banner-next-pre ion-icon {
+    display: flex;
+    color: #fff;
+    padding: 14px;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    background-color: #ffffff70;
+}
+
+/* Container Anime */
+.container-anime {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 20px;
+    margin-top: 100vmin;
+}
+.anime {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 350px;
+    background-color: #ccc;
+    border: solid 1px chocolate;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--bs-gray-900);
+}
+
+.anime-name {
+    width: auto;
+    height: auto;
+    margin-top: 4px;
+    flex-grow: 1;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.anime-name > a {
+    color: var(--bs-light);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 10px;
+    /* Ẩn bớt text nếu text quá dài*/
+    display: -webkit-box;
+    text-align: center;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* word-break: break-all; */
+}
+.anime-type {
+    color: var(--bs-red);
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Reponsive */
+@media (max-width: 575.98px) {
+    .header-top {
+        height: 30px;
+        padding: 0 10px;
+    }
+    .menu {
+        display: block;
+    }
+    .header {
+        display: none;
+    }
+    .homepage {
+        transform: translate(-50%, -50%);
+    }
+    .homepage a {
+        font-size: 14px;
+    }
+    .login {
+        width: auto;
+        gap: 16px;
+    }
+    .login a {
+        font-size: 16px;
+    }
+    .login-icon {
+        font-size: 24px;
+    }
+    .menu ion-icon {
+        margin-left: -16px;
+        color: var(--bs-white);
+        margin-left: 20px;
+    }
+    .banner {
+        min-height: unset;
+        height: 250px;
+        width: auto;
+        background-size: contain;
+    }
+    .banner-infor {
+        width: 200px;
+        height: fit-content;
+        top: 50px;
+        left: 12px;
+    }
+    .banner-rank {
+        font-size: 14px;
+        height: 20px;
+    }
+    .banner-name {
+        height: 22px;
+        font-size: 20px;
+    }
+    .banner-description {
+        font-size: 12px;
+    }
+    .banner-icons {
+        height: 20px;
+    }
+    .banner-icon {
+        margin-top: unset;
+    }
+    .banner-icon ion-icon{
+        font-size: 12px;
+    }
+    .watch-now-trailer {
+        width: inherit;
+        height: 28px;
+        margin-top: unset;
+    }
+    .watch-now {
+        height: inherit;
+    }
+    .watch-now a {
+        font-size: 14px;
+        font-weight: 800;
+        /* padding-bottom: 12px; */
+    }
+    .watch-now ion-icon {
+        font-size: 20px;
+    }
+    .trailer-banner {
+        height: inherit;
+        font-size: 16px;
+        border: solid 2px #CAE962;
+        border-radius: 15px;
+        padding: 0 8px;
+    }
+    .trailer-banner a {
+        line-height: unset;
+    }
+}
+
+/* Reponsive */
+@media (min-width: 1200px) and (max-width: 1400px){
+    .nav a, .login a {
+        font-size: 18px;
+    }
+
+    .header {
+        gap: 30px;
+    }
+
+    .banner-name {
+        height: 76px;
+    }
+    .anime {
+    }
+}
+
+@media (max-width: 1200px) {
+    .homepage {
+        display: none;
+    }
+    .banner-infor {
+        top: 200px;
+    }
+}

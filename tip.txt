@@ -1,0 +1,8 @@
+/* Tạo border cho chữ */
+h1 {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    position: relative;
+}
+

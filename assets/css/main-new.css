@@ -1,0 +1,74 @@
+body {
+    background: var(--bs-gray-500) url('../img/background-new4.png') 1000px 60px/contain no-repeat;
+    background-size: auto 90vh;
+    /* background: url('../img/background-new.webp') center left/cover no-repeat; */
+}
+
+/* Header */
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: 0;
+    box-shadow: 0 50px 50px 0 #00000080 inset;
+}
+
+.homepage {
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    object-fit: contain;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+
+.nav {
+    width: auto;
+    height: 100%;
+    margin-right: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.nav a {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+    color: var(--bs-black);
+}
+
+.nav a:hover {
+    background-color: var(--bs-gray-500);
+    border-radius: 8px;
+}
+
+.content {
+    width: 100%;
+    height: calc(100vmin - 60px);
+}
+
+.c1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30vh;
+    left: 6vh;
+    font-weight: 700;
+}
+
+.p1 {
+    font-size: 60px;
+}
+.p2 {
+    font-size: 66px;
+}
+.p3 {
+    font-size: 64px;
+}

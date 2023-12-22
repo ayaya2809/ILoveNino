@@ -1,0 +1,85 @@
+body {
+    background-color: #111319;
+}
+
+.header-top {
+    background-color: #1a1c22;
+    height: 70px;
+}
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    height: 70px;
+    line-height: 70px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+}
+.homepage a {
+    font-size: 40px;
+    color: #ebd7d7;
+    letter-spacing: 2px;
+}
+.header {
+    width: 400px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+}
+.nav {
+    font-size: 22px;
+    text-align: center;
+}
+.nav a {
+    color: #e0e0e0;
+}
+.login {
+    width: 321px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.login a {
+    font-size: 22px;
+    color: #e0e0e0;
+}
+.login ion-icon {
+    font-size: 28px;
+    margin-top: 6px;
+    color: #e0e0e0;
+}
+
+/* Anime Player */
+.anime-player {
+    width: 80vw;
+    height: calc(80vw *9/16);
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.anime-list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.anime-list a {
+    color: #e0e0e0;
+    border: solid 1px #ffffff00;
+    padding: 6px 10px;
+}
+
+.anime-list a:hover {
+    border: solid 1px #e0e0e0;
+    border-radius: 20px;
+}

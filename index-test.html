@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            row-gap: 6px;
+        }
+
+        .gallery-row {
+            width: 100%;
+            column-gap: 6px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .gallery-item {
+            display: flex;
+            flex-grow: 1;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 8px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+<div id="gallery"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var galleryContainer = document.getElementById("gallery");
+
+    function fetchImages() {
+        var imageDirectory = "./nino/";
+
+        fetch(imageDirectory)
+            .then(response => response.text())
+            .then(data => {
+                var parser = new DOMParser();
+                var htmlDoc = parser.parseFromString(data, "text/html");
+
+                var imageElements = [];
+                var images = htmlDoc.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".jfif"]');
+                
+                var galleryRows = [];
+                var currentRow;
+                
+                // Convert NodeList to Array for sorting
+                images = Array.from(images);
+
+                // Sort images based on aspect ratio
+                images.sort(function(a, b) {
+                    var aspectRatioA = a.clientWidth / a.clientHeight;
+                    var aspectRatioB = b.clientWidth / b.clientHeight;
+                    return aspectRatioA - aspectRatioB;
+                });
+
+                images.forEach((image, index) => {
+                    var imagePath = image.getAttribute("href");
+                    var altText = "Image " + (index + 1);
+
+                    var imgElement = document.createElement("img");
+                    imgElement.src = imagePath;
+                    imgElement.alt = altText;
+
+                    var galleryItem = document.createElement("div");
+                    galleryItem.classList.add("gallery-item");
+                    galleryItem.appendChild(imgElement);
+
+                    imageElements.push(galleryItem);
+
+                    if (!currentRow || currentRow.children.length >= 4 ) {
+                        currentRow = document.createElement("div");
+                        currentRow.classList.add("gallery-row");
+                        galleryRows.push(currentRow);
+                    }
+                    currentRow.appendChild(galleryItem);
+                });
+                galleryRows.forEach(row => {
+                    galleryContainer.appendChild(row);
+                });
+            });
+    }
+    fetchImages();
+});
+</script>
+</body>
+</html>
