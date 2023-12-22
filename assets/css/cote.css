@@ -70,11 +70,11 @@ body {
     color: var(--bs-red);
 }
 .anime-player {
-    width: 1500px;
-    height: calc(1500px *9/16);
+    width: 80vw;
+    height: calc(80vw *9/16);
     border-radius: 6px;
     overflow: hidden;
-    margin: 20px auto;
+    margin: auto;
     display: flex;
     justify-content: center;
 }
