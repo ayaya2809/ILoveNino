@@ -67,28 +67,34 @@ body {
     text-align: center;
 }
 .anime-size {
-    color: var(--bs-red);
+    color: #ffffff10;
+    margin: 0 auto;
+}
+.player-part-list {
+    display: flex;
+    flex-direction: column;
 }
 .anime-player {
-    width: 80vw;
-    height: calc(80vw *9/16);
+    width: 960px;
+    height: calc(960px *9/16);
     border-radius: 6px;
+    border: solid 1px #ffffff20;
     overflow: hidden;
     margin: auto;
     display: flex;
     justify-content: center;
 }
+
+.anime-list, .anime-list-ss2,
 .anime-part {
     display: flex;
-    justify-content: center;
+    margin-left: 30px;
+    margin-top: 4px;
     gap: 10px;
 }
 
-.anime-list {
-    margin-top: 20px;
+.anime-list-ss2 {
     display: flex;
-    justify-content: center;
-    gap: 10px;
 }
 
 .anime, .part {
@@ -96,7 +102,15 @@ body {
     color: var(--bs-light);
     border: solid 1px var(--bs-light);
     border-radius: 20px;
-    padding: 6px 12px;
+    padding: 4px 8px;
+}
+
+.part {
+    font-weight: bold;
+}
+
+.anime {
+    border-radius: 10px;
 }
 
 .part:hover,
@@ -106,8 +120,5 @@ body {
 
 /* Reponsive */
 @media (max-width: 1400px) {
-    .anime-player {
-        width: 80vw;
-        height: calc(80vw * 9/16);
-    }
+
 }

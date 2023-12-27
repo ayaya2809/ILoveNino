@@ -1,12 +1,15 @@
-/* Tạo border cho chữ */
-h1 {
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #000;
-    position: relative;
-}
+window.onload = function() {
+    // Lấy phần tử đầu tiên trong class 'part' và 'anime'
+    var firstPart = document.querySelector('.part');
+    var firstAnime = document.querySelector('.anime');
+  
+    // Thay đổi màu nền thành màu đỏ
+    firstPart.style.backgroundColor = 'red';
+    firstAnime.style.backgroundColor = 'red';
+  };
+  
 
-js-anime-old
+
 // Lấy tất cả các phần tử có class 'anime'
 let episodes = document.querySelectorAll('.anime');
 
@@ -49,4 +52,3 @@ seasons.forEach((season) => {
     document.querySelector('.anime-player iframe').src = this.getAttribute('onclick').split("'")[1];
   });
 });
-
