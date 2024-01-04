@@ -5,6 +5,7 @@
     --bs-black: #000;
     --bs-gray: #6c757d;
     --bs-gray-500: #adb5bd;
+    --bs-light: #f8f9fa;
 }
 
 *, tr, td, h1 {
