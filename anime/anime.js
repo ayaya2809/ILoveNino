@@ -2,10 +2,10 @@ window.onload = function() {
     // Lấy phần tử đầu tiên trong class 'part' và 'anime'
     var firstPart = document.querySelector('.part');
     var firstAnime = document.querySelector('.anime');
-  
+    var firstAnimesrv = document.querySelector('.anime-srv');
     // Thay đổi màu nền thành màu đỏ
     firstPart.style.backgroundColor = 'red';
-    firstAnime.style.backgroundColor = 'red';
+    firstAnimesrv.style.backgroundColor = 'red';
   };
   
 
@@ -21,6 +21,8 @@ episodes.forEach((episode) => {
     episodes.forEach((ep) => {
       ep.style.backgroundColor = '';
     });
+
+    document.querySelector('.img-player').style.display = 'none';
 
     // Đặt màu nền của tập được click thành màu đỏ
     this.style.backgroundColor = 'red';
@@ -50,5 +52,23 @@ seasons.forEach((season) => {
 
     // Thay đổi URL của iframe
     document.querySelector('.anime-player iframe').src = this.getAttribute('onclick').split("'")[1];
+
+    // Hide season
+    document.querySelector('.ss1').addEventListener('click', function() {
+      document.querySelector('.anime-list').style.display = 'flex';
+      document.querySelector('.anime-list-ss2').style.display = 'none';
+      document.querySelector('.anime-list-ss3').style.display = 'none';
+    });
+    document.querySelector('.ss2').addEventListener('click', function() {
+      document.querySelector('.anime-list-ss2').style.display = 'flex';
+      document.querySelector('.anime-list').style.display = 'none';
+      document.querySelector('.anime-list-ss3').style.display = 'none';
+    });
+    document.querySelector('.ss3').addEventListener('click', function() {
+      document.querySelector('.anime-list-ss3').style.display = 'flex';
+      document.querySelector('.anime-list').style.display = 'none';
+      document.querySelector('.anime-list-ss2').style.display = 'none';
+    });
+    
   });
 });

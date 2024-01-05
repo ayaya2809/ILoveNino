@@ -86,10 +86,12 @@ body {
 }
 .anime-part-servers {
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 .anime-servers {
     display: flex;
+    align-items: center;
     color: #ffffff;
     margin: 10px 30px;
     gap: 10px;
@@ -103,31 +105,47 @@ body {
 }
 .anime-srv {
     padding: 2px 4px;
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.3);
     border-radius: 4px;
     border: solid 1px #fff;
 }
 
-.anime-list, .anime-list-ss2, .anime-list-ss3,
 .anime-part {
     display: flex;
     margin: 4px 30px 0px 30px;
     gap: 10px;
+}
+.anime-list,
+.anime-list-ss2,
+.anime-list-ss3 {
+    display: flex;
+}
+.anime-list-ss2,
+.anime-list-ss3 {
+    display: none;
+}
+.anime-list,
+.anime-list-ss2,
+.anime-list-ss3 {
+    margin-top: 4px;
+    margin-left: 200px;
+    gap: 6px;
 }
 .anime, .part {
     cursor: pointer;
     color: var(--bs-light);
     border: solid 1px var(--bs-light);
     border-radius: 20px;
-    padding: 4px;
 }
 
 .part {
     font-weight: bold;
+    padding: 4px 6px;
 }
 
 .anime {
     border-radius: 10px;
+    padding: 4px;
 }
 
 .part:hover,
@@ -137,5 +155,13 @@ body {
 
 /* Reponsive */
 @media (max-width: 1400px) {
-
+    .header,
+    .header-top,
+    .homepage,
+    .login {
+        height: 40px;
+    }
+    .homepage a {
+        font-size: 30px;
+    }
 }

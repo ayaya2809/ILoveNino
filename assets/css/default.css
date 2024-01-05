@@ -46,6 +46,15 @@ p {
     color: var(--bs-red);
 }
 
+.img-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: inherit;
+    max-height: inherit;
+    object-fit: contain;
+}
+
 /* ::-webkit-scrollbar {
     width: 14px;
 }
