@@ -47,12 +47,10 @@ p {
 }
 
 .img-player {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: inherit;
-    max-height: inherit;
     object-fit: contain;
+}
+.frame-video {
+    display: none;
 }
 
 /* ::-webkit-scrollbar {

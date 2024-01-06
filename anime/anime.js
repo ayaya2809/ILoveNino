@@ -1,14 +1,9 @@
 window.onload = function() {
-    // Lấy phần tử đầu tiên trong class 'part' và 'anime'
     var firstPart = document.querySelector('.part');
-    var firstAnime = document.querySelector('.anime');
     var firstAnimesrv = document.querySelector('.anime-srv');
-    // Thay đổi màu nền thành màu đỏ
     firstPart.style.backgroundColor = 'red';
     firstAnimesrv.style.backgroundColor = 'red';
   };
-  
-
 
 // Lấy tất cả các phần tử có class 'anime'
 let episodes = document.querySelectorAll('.anime');
@@ -22,12 +17,11 @@ episodes.forEach((episode) => {
       ep.style.backgroundColor = '';
     });
 
-    document.querySelector('.img-player').style.display = 'none';
-
     // Đặt màu nền của tập được click thành màu đỏ
     this.style.backgroundColor = 'red';
+    document.querySelector('.img-player').style.display = 'none';
+    document.querySelector('.frame-video').style.display = 'flex';
 
-    // Thay đổi URL của iframe
     document.querySelector('.anime-player iframe').src = this.getAttribute('onclick').split("'")[1];
   });
 });
@@ -36,7 +30,7 @@ episodes.forEach((episode) => {
 let seasons = document.querySelectorAll('.part');
 
 // Lặp qua từng season
-seasons.forEach((season) => {
+seasons.forEach((season,index) => {
   // Thêm sự kiện click cho mỗi season
   season.addEventListener('click', function() {
     // Reset màu nền cho tất cả các tập và season khi chuyển season
@@ -46,12 +40,12 @@ seasons.forEach((season) => {
     seasons.forEach((se) => {
       se.style.backgroundColor = '';
     });
+    document.querySelector('.frame-video').style.display = 'none';
+    document.querySelector('.img-player').style.display = 'flex';
 
     // Đặt màu nền của season được click thành màu đỏ
     this.style.backgroundColor = 'red';
-
-    // Thay đổi URL của iframe
-    document.querySelector('.anime-player iframe').src = this.getAttribute('onclick').split("'")[1];
+    document.querySelector('.anime-player iframe').src = '';
 
     // Hide season
     document.querySelector('.ss1').addEventListener('click', function() {

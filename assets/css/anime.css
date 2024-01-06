@@ -33,7 +33,7 @@ body {
 }
 .homepage a {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 45px;
     color: var(--bs-light);
     letter-spacing: 2px;
     line-height: 60px;

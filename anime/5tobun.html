@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="5 tô bún">
-    <title>5 tô bún</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/default.css">
-    <link rel="stylesheet" href="../assets/css/5tobun.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="icon" href="../assets/img/nino-icon.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="COTE">
+  <title>5 tô bún</title>
+  <link rel="stylesheet" href="../assets/css/default.css">
+  <link rel="stylesheet" href="../assets/css/anime-video.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="icon" href="../assets/img/nino-icon.webp">
 </head>
+
 <body>
-    <div class="header-top">
-        <div class="homepage"><a href="#">Anime</a></div>
-        <div class="header">
-            <div class="nav"><a href="#">Most Popular</a></div>
-            <div class="nav"><a href="#">Movies</a></div>
-            <div class="nav"><a href="#">TV Series</a></div>
-        </div>
-        <div class="login">
-            <div><ion-icon class="header-icon" name="search-outline"></ion-icon></div>
-            <div><ion-icon class="header-icon" name="notifications-outline"></ion-icon></div>
-            <div><a href="">Login</a></div>
-        </div>
+  <!-- Header -->
+  <div class="header-top">
+    <div class="homepage"><a href="">Anime</a></div>
+    <div class="header">
+      <div class="nav"><a href="">Most Popular</a></div>
+      <div class="nav"><a href="">Movies</a></div>
+      <div class="nav"><a href="">TV Series</a></div>
     </div>
+    <div class="login">
+      <div><ion-icon class="header-icon" name="search-outline"></ion-icon></div>
+      <div><ion-icon class="header-icon" name="notifications-outline"></ion-icon></div>
+      <div><a href="">Login</a></div>
+    </div>
+  </div>
+
+  <!-- Content -->
+
+  <!-- Breadcrumb -->
+    
+  <!-- End Breadcrumb -->
+
+  <div class="anime-infor">
+    <div class="anime-name">
+      <h1>Nhà có 5 nàng dâu</h1>
+    </div>
+    <div class="anime-size">Độ phân giải: FHD<br>Chất lượng: Cao (Tool)</div>
+  </div>
 
     <div class="anime-player">
-        <iframe width="100%" height="100%" src="https://helvid.com/play/index/f7dc31178fe5" frameborder="0" allowfullscreen></iframe>
+      <iframe class="frame-video" src="" width="100%" height="100%" frameborder="0" allowfullscreen >
+      </iframe>
+      <img class="img-player" src="../assets/img/gif00.gif" alt="Nino Nakano Gif">
     </div>
+
+    <div class="anime-part-servers">
+      <div class="anime-part">
+        <div class="part ss1" onclick="changePart('../assets/img/gif00.gif',1)">Season 1</div>
+        <div class="part ss2" onclick="changePart('../assets/img/gif00.gif',2)">Season 2</div>
+        <div class="part ss3" onclick="changePart('../assets/img/gif00.gif',3)">Season 3</div>
+      </div>
+
+      <div class="anime-servers">
+        <p>Chọn Server</p>
+        <div class="anime-srv hel">HEL</div>
+        <div class="anime-srv fb">FB</div>
+        <div class="anime-srv ana">ANA</div>
+      </div>
+    </div>
+  
     <div class="anime-list">
-        <span><a href="http://">Tập 1</a></span>
-        <span><a href="http://">Tập 2</a></span>
-        <span><a href="http://">Tập 3</a></span>
-        <span><a href="http://">Tập 4</a></span>
-        <span><a href="http://">Tập 5</a></span>
-        <span><a href="http://">Tập 6</a></span>
-        <span><a href="http://">Tập 7</a></span>
-        <span><a href="http://">Tập 8</a></span>
-        <span><a href="http://">Tập 9</a></span>
-        <span><a href="http://">Tập 10</a></span>
+      <div class="anime" onclick="changeVideo('https://helvid.com/play/index/43fca7f863ce',1)">Tập 1</div>
+      <div class="anime" onclick="changeVideo('',2)">Tập 2</div>
+      <div class="anime" onclick="changeVideo('',3)">Tập 3</div>
+      <div class="anime" onclick="changeVideo('',4)">Tập 4</div>
+      <div class="anime" onclick="changeVideo('',5)">Tập 5</div>
+      <div class="anime" onclick="changeVideo('',6)">Tập 6</div>
+      <div class="anime" onclick="changeVideo('',7)">Tập 7</div>
+      <div class="anime" onclick="changeVideo('',8)">Tập 8</div>
+      <div class="anime" onclick="changeVideo('',9)">Tập 9</div>
+      <div class="anime" onclick="changeVideo('',10)">Tập 10</div>
+      <div class="anime" onclick="changeVideo('',11)">Tập 11</div>
+      <div class="anime" onclick="changeVideo('',12)">Tập 12_End</div>
     </div>
+
+    <div class="anime-list-ss2">
+      <div class="anime" onclick="changeVideo('',1)">Tập 1</div>
+      <div class="anime" onclick="changeVideo('',2)">Tập 2</div>
+      <div class="anime" onclick="changeVideo('',3)">Tập 3</div>
+      <div class="anime" onclick="changeVideo('',4)">Tập 4</div>
+      <div class="anime" onclick="changeVideo('',5)">Tập 5</div>
+      <div class="anime" onclick="changeVideo('',6)">Tập 6</div>
+      <div class="anime" onclick="changeVideo('',7)">Tập 7</div>
+      <div class="anime" onclick="changeVideo('',8)">Tập 8</div>
+      <div class="anime" onclick="changeVideo('',9)">Tập 9</div>
+      <div class="anime" onclick="changeVideo('',10)">Tập 10</div>
+      <div class="anime" onclick="changeVideo('',11)">Tập 11</div>
+      <div class="anime" onclick="changeVideo('',12)">Tập 12</div>
+      <div class="anime" onclick="changeVideo('',13)">Tập 13_End</div>
+    </div>
+
+    <div class="anime-list-ss3">
+      <div class="anime" onclick="changeVideo('',1)">Movie</div>
+    </div>
+
+
+
+
+    <div class="temp" style="padding-bottom: 100px;"></div>
+  <!-- Js -->
+  <script src="./anime.js"></script>
 </body>
+
 </html>
