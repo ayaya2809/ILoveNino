@@ -117,16 +117,22 @@ body {
 }
 .anime-list,
 .anime-list-ss2,
-.anime-list-ss3 {
+.anime-list-ss3,
+.anime-list-ss4,
+.anime-list-ss5 {
     display: flex;
 }
 .anime-list-ss2,
-.anime-list-ss3 {
+.anime-list-ss3,
+.anime-list-ss4,
+.anime-list-ss5 {
     display: none;
 }
 .anime-list,
 .anime-list-ss2,
-.anime-list-ss3 {
+.anime-list-ss3,
+.anime-list-ss4,
+.anime-list-ss5 {
     margin-top: 4px;
     margin-left: 200px;
     gap: 6px;
